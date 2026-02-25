@@ -3,7 +3,7 @@ name: manage-services
 description: Define and implement the Moqui framework services. Use when creating new services in Services.xml, modifying parameters, or implementing business logic using XML Actions or scripts.
 ---
 
-# Skill: manage-services (Moqui)
+# Skill: manage-moqui-services
 ## Goal
 Define and implement business logic as reusable, transactional, and securable services in the Moqui framework.
 
