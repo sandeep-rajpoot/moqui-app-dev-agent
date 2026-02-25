@@ -28,7 +28,7 @@ Define and implement business logic as reusable, transactional, and securable se
     - Define services in files named `*Services.xml` placed in the `service/` directory of a component.
     - **Name Structure**: Use `<service verb="..." noun="...">` (e.g., `verb="create" noun="Product"`).
     - **Parameters**: Define inside `<in-parameters>` and `<out-parameters>` using `<parameter name="..." type="..." required="true|false"/>`.
-    - **Transactions**: Configured on `<service>` tag. e.g., `transaction="use-or-begin"` (default is `use-or-begin`).
+    - **Transactions**: Configured on the `<service>` tag using the `transaction` attribute. Options: `use-or-begin` (default), `force-new` (suspends current tx), `ignore` (no tx), `cache` (delays until commit).
     - **Auth**: Set `authenticate="true"` to require a logged-in user. Use `<service-call disable-authz="true"/>` to bypass auth within other services.
 3. **Registration**: 
     - In Moqui, services are auto-discovered based on the file name `*Services.xml` within a component's `service` directory. No explicit component registration is required like in OFBiz.
