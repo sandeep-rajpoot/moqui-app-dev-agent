@@ -39,6 +39,9 @@ Ensure all Moqui contributions meet production-grade standards for clarity, main
     - **Service Calls**: ALWAYS use the Service Facade DSL (`ec.service.sync().name(...).call()`) for Groovy, and `<sice-ervcall>` in XML Actions.
 5. **Internationalization (i18n)**:
     - Never hardcode user-facing strings in UI or error boundaries. In Groovy use `ec.l10n.localize("Key")`. In XML use standard localized message tags or attributes.
+6. **XSD Validation**:
+    - ALWAYS ensure your XML files (e.g., `*Services.xml`, `*Screens.xml`, `*Entities.xml`) are strictly validated against Moqui's provided XSD files (`moqui-service.xsd`, `moqui-screen.xsd`, etc.).
+    - If you are unsure whether an attribute or element tag is correct, cross-check against the appropriate `.xsd` schema file to avoid runtime exceptions or ignored definitions.
 
 ## Guardrails
 - **Consistency**: Follow the existing indentation and naming conventions of the component you are editing.
